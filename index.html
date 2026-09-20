@@ -86,7 +86,7 @@
 
             <div class="action-container">
 
-                <button>➕ 新增演唱會</button>
+                <button onclick="openConcertForm()">➕ 新增演唱會</button>
 
                 <button>➕ 新增周邊</button>
 
@@ -96,7 +96,70 @@
 
         </section>
 
+        <!-- 新增演唱會表單 -->
 
+<div id="concertForm" class="form-overlay">
+
+    <div class="form-box">
+
+        <h2>➕ 新增演唱會</h2>
+
+        <label>使用者名稱</label>
+        <input type="text" id="userName" placeholder="例如：佩蓁">
+
+        <label>藝人／團體</label>
+        <input type="text" id="artist" placeholder="例如：SUPER JUNIOR">
+
+        <label>演唱會名稱</label>
+        <input type="text" id="concertName" placeholder="例如：SUPER SHOW 10">
+
+        <label>演唱會日期</label>
+        <input type="date" id="concertDate">
+
+        <label>演唱會地點</label>
+        <input type="text" id="concertLocation" placeholder="例如：台北小巨蛋">
+
+        <label>是否有票</label>
+
+        <div class="ticket-option">
+            <label>
+                <input type="radio" name="hasTicket" value="yes">
+                有票
+            </label>
+
+            <label>
+                <input type="radio" name="hasTicket" value="no">
+                沒有票
+            </label>
+        </div>
+
+        <label>票價</label>
+        <input type="number" id="ticketPrice" placeholder="例如：4800">
+
+        <label>區域</label>
+        <input type="text" id="ticketArea" placeholder="例如：B1">
+
+        <label>排</label>
+        <input type="text" id="ticketRow" placeholder="例如：5">
+
+        <label>號碼</label>
+        <input type="text" id="ticketNumber" placeholder="例如：12">
+
+        <label>演唱會主視覺</label>
+        <input type="file" id="concertImage" accept="image/*">
+
+        <div class="form-buttons">
+
+            <button onclick="saveConcert()">儲存</button>
+
+            <button onclick="closeConcertForm()">取消</button>
+
+        </div>
+
+    </div>
+
+</div>
+        
         <!-- 最近紀錄 -->
         <section class="recent">
 
