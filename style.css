@@ -415,3 +415,6 @@ section > h2 {
 .form-overlay {
     display: none !important;
 }
+.form-overlay.show {
+    display: flex !important;
+}
