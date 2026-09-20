@@ -2,7 +2,7 @@ function openConcertForm() {
 
     const form = document.getElementById("concertForm");
 
-    form.style.display = "flex";
+    form.classList.add("show");
 
 }
 
@@ -11,7 +11,7 @@ function closeConcertForm() {
 
     const form = document.getElementById("concertForm");
 
-    form.style.display = "none";
+    form.classList.remove("show");
 
 }
 
@@ -24,7 +24,7 @@ function saveConcert() {
 
     const form = document.getElementById("concertForm");
 
-    form.style.display = "flex";
+    form.classList.add("show");
 
 }
 
@@ -33,7 +33,7 @@ function closeConcertForm() {
 
     const form = document.getElementById("concertForm");
 
-    form.style.display = "none";
+    form.classList.remove("show");
 
 }
 
