@@ -411,3 +411,7 @@ section > h2 {
 
     cursor: pointer;
 }
+
+.form-overlay {
+    display: none !important;
+}
