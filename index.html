@@ -1,37 +1,113 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的演唱會資料庫</title>
-    <link rel="stylesheet" href="style.css"><link rel="stylesheet" href="style.css">
+
+    <title>My Concert Database</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <h1>🎤 我的演唱會資料庫</h1>
+    <!-- 側邊欄 -->
+    <aside class="sidebar">
 
-    <p>記錄我的演唱會、門票與周邊收藏。</p>
+        <h1>🎫</h1>
+        <h2>My Concert<br>Database</h2>
 
-    <hr>
+        <nav>
+            <a href="#" class="active">🏠 首頁</a>
+            <a href="#">🎤 演唱會</a>
+            <a href="#">🛍️ 周邊</a>
+            <a href="#">🔍 查詢</a>
+        </nav>
 
-    <h2>⏰ 下一場演唱會</h2>
+        <div class="sidebar-bottom">
+            <a href="#">➕ 新增資料</a>
+        </div>
 
-    <p>目前還沒有演唱會資料</p>
+    </aside>
 
-    <hr>
 
-    <h2>🎫 演唱會紀錄</h2>
+    <!-- 主要內容 -->
+    <main class="main-content">
 
-    <button>➕ 新增演唱會</button>
-    <button>🔍 查詢演唱會</button>
+        <header>
+            <h2>🏠 首頁</h2>
+            <p>記錄每一場值得記住的演唱會。</p>
+        </header>
 
-    <hr>
 
-    <h2>🛍️ 周邊收藏</h2>
+        <!-- 下一場演唱會 -->
+        <section class="upcoming">
 
-    <button>➕ 新增周邊</button>
-    <button>🔍 查詢周邊</button>
+            <h2>⏰ 即將到來的演唱會</h2>
+
+            <div class="concert-card">
+
+                <div class="concert-image">
+                    <p>演唱會主視覺</p>
+                </div>
+
+                <div class="concert-info">
+
+                    <p class="label">NEXT CONCERT</p>
+
+                    <h1>SUPER JUNIOR</h1>
+
+                    <h2>SUPER SHOW 10</h2>
+
+                    <p>📅 2026 / 10 / 18</p>
+                    <p>📍 Taipei Dome</p>
+
+                    <div class="countdown">
+                        <strong>28</strong>
+                        <span>天</span>
+                    </div>
+
+                    <div class="ticket-status">
+                        🎫 已購票
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- 快速功能 -->
+        <section class="quick-actions">
+
+            <h2>快速操作</h2>
+
+            <div class="action-container">
+
+                <button>➕ 新增演唱會</button>
+
+                <button>➕ 新增周邊</button>
+
+                <button>🔍 查詢資料</button>
+
+            </div>
+
+        </section>
+
+
+        <!-- 最近紀錄 -->
+        <section class="recent">
+
+            <h2>最近紀錄</h2>
+
+            <p>目前還沒有資料。</p>
+
+        </section>
+
+    </main>
 
 </body>
+
 </html>
