@@ -1,43 +1,328 @@
+/* ===== 基本設定 ===== */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f5f7fa;
+    margin: 0;
+    font-family: Arial, "Noto Sans TC", sans-serif;
+    background-color: #f5f6fa;
     color: #333;
-    max-width: 900px;
-    margin: 0 auto;
+}
+
+
+/* ===== 側邊欄 ===== */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 240px;
+    height: 100vh;
+
+    background-color: #ffffff;
+
     padding: 30px 20px;
+
+    border-right: 1px solid #e5e5e5;
 }
 
-h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 10px;
+.sidebar > h1 {
+    margin: 0;
+    font-size: 36px;
 }
 
-body > p {
+.sidebar > h2 {
+    margin-top: 10px;
+    margin-bottom: 40px;
+
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+
+/* ===== 選單 ===== */
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+nav a,
+.sidebar-bottom a {
+    display: block;
+
+    padding: 12px 15px;
+
+    text-decoration: none;
+    color: #555;
+
+    border-radius: 10px;
+
+    transition: 0.2s;
+}
+
+nav a:hover,
+.sidebar-bottom a:hover {
+    background-color: #f0f1f5;
+}
+
+nav a.active {
+    background-color: #eeeeee;
+    color: #111;
+    font-weight: bold;
+}
+
+
+/* ===== 側邊欄底部 ===== */
+
+.sidebar-bottom {
+    position: absolute;
+
+    left: 20px;
+    right: 20px;
+    bottom: 30px;
+}
+
+.sidebar-bottom a {
+    background-color: #222;
+    color: white;
     text-align: center;
+}
+
+.sidebar-bottom a:hover {
+    background-color: #444;
+}
+
+
+/* ===== 主要內容 ===== */
+
+.main-content {
+    margin-left: 240px;
+
+    padding: 45px;
+
+    max-width: 1200px;
+}
+
+
+/* ===== 頁面標題 ===== */
+
+header h2 {
+    margin: 0;
+
+    font-size: 28px;
+}
+
+header p {
+    margin-top: 8px;
+
+    color: #777;
+}
+
+
+/* ===== 區塊 ===== */
+
+section {
+    margin-top: 40px;
+}
+
+section > h2 {
+    margin-bottom: 20px;
+}
+
+
+/* ===== 演唱會卡片 ===== */
+
+.concert-card {
+    display: flex;
+
+    background-color: white;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* ===== 演唱會圖片 ===== */
+
+.concert-image {
+    width: 50%;
+    min-height: 350px;
+
+    background-color: #e9e9ed;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #888;
+}
+
+
+/* ===== 演唱會資訊 ===== */
+
+.concert-info {
+    width: 50%;
+
+    padding: 40px;
+}
+
+.label {
+    font-size: 13px;
+
+    color: #888;
+
+    letter-spacing: 2px;
+}
+
+.concert-info h1 {
+    margin: 10px 0 5px;
+
+    font-size: 32px;
+}
+
+.concert-info h2 {
+    margin-top: 0;
+
     color: #666;
 }
 
-hr {
-    border: none;
-    border-top: 1px solid #ddd;
-    margin: 30px 0;
+.concert-info p {
+    margin: 8px 0;
 }
 
-h2 {
-    margin-bottom: 15px;
+
+/* ===== 倒數 ===== */
+
+.countdown {
+    margin-top: 25px;
+
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
 }
 
-button {
-    padding: 10px 16px;
-    margin-right: 8px;
+.countdown strong {
+    font-size: 48px;
+}
+
+.countdown span {
+    font-size: 18px;
+}
+
+
+/* ===== 票券狀態 ===== */
+
+.ticket-status {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    padding: 8px 14px;
+
+    border-radius: 20px;
+
+    background-color: #eeeeee;
+
+    font-size: 14px;
+}
+
+
+/* ===== 快速操作 ===== */
+
+.action-container {
+    display: flex;
+
+    gap: 15px;
+}
+
+.action-container button {
     border: none;
-    border-radius: 8px;
-    background-color: #333;
-    color: white;
+
+    padding: 14px 20px;
+
+    border-radius: 10px;
+
+    background-color: white;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+
     cursor: pointer;
+
+    font-size: 15px;
+
+    transition: 0.2s;
 }
 
-button:hover {
-    opacity: 0.8;
+.action-container button:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ===== 最近紀錄 ===== */
+
+.recent {
+    background-color: white;
+
+    padding: 25px;
+
+    border-radius: 15px;
+}
+
+.recent p {
+    color: #888;
+}
+
+
+/* ===== 手機版 ===== */
+
+@media (max-width: 700px) {
+
+    .sidebar {
+        position: static;
+
+        width: 100%;
+        height: auto;
+
+        border-right: none;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .sidebar-bottom {
+        position: static;
+
+        margin-top: 20px;
+    }
+
+    .main-content {
+        margin-left: 0;
+
+        padding: 25px 15px;
+    }
+
+    .concert-card {
+        flex-direction: column;
+    }
+
+    .concert-image,
+    .concert-info {
+        width: 100%;
+    }
+
+    .concert-image {
+        min-height: 250px;
+    }
+
+    .action-container {
+        flex-direction: column;
+    }
 }
